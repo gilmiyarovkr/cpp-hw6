@@ -1,6 +1,5 @@
-add_library(matrix_lib STATIC
-    include/parser.h
-    parser.cpp
+add_library(matrix_lib INTERFACE
+    include/matrix.hpp
 )
 
 target_link_libraries(matrix_lib INTERFACE compiler_flags)
