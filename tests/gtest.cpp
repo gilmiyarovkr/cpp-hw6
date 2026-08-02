@@ -59,3 +59,20 @@ TEST(MatrixTest, MultiDimensionalOperations5D) {
     EXPECT_EQ(matrix5D.size(), 0U); // Память успешно освобождена
     EXPECT_EQ(matrix5D[10][20][30][40][50], 0); // Возвращается дефолт
 }
+
+TEST(MatrixTest, ChainedAssignments) {
+    Matrix<int, 2, 0> matrix;
+
+    ASSERT_EQ(matrix.size(), 0U);
+
+    ((matrix[100][100] = 314) = 0) = 217;
+
+    EXPECT_EQ(matrix[100][100], 217);
+    EXPECT_EQ(matrix.size(), 1U);
+
+    ((matrix[200][200] = 555) = 888) = 0;
+
+    EXPECT_EQ(matrix[200][200], 0);
+    EXPECT_EQ(matrix.size(), 1U);
+}
+
