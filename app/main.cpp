@@ -3,7 +3,7 @@
 
 int main()
 {
-    Matrix <int, 2, 0> matrix;
+    Matrix <int, 0> matrix;
 
     // Заполнение матрицы
     for(size_t i = 0; i <= 9; ++i)
