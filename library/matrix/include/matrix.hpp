@@ -4,7 +4,7 @@
 #include <tuple>
 #include <array>
 
-template <typename T, size_t N, T DefaultValue = 0>
+template <typename T, T DefaultValue, size_t N = 2>
 class Matrix
 {
 public:

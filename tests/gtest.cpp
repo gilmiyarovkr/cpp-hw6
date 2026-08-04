@@ -3,7 +3,7 @@
 #include "matrix.hpp"
 
 TEST(MatrixTest, BasicOperations2D) {
-    Matrix<int, 2, -1> matrix;
+    Matrix<int, -1> matrix;
 
     EXPECT_EQ(matrix.size(), 0U);
 
@@ -29,7 +29,7 @@ TEST(MatrixTest, BasicOperations2D) {
 }
 
 TEST(MatrixTest, MultiDimensionalOperations5D) {
-    Matrix<int, 5, 0> matrix5D;
+    Matrix<int, 0, 5> matrix5D;
 
     EXPECT_EQ(matrix5D.size(), 0U);
 
@@ -61,7 +61,7 @@ TEST(MatrixTest, MultiDimensionalOperations5D) {
 }
 
 TEST(MatrixTest, ChainedAssignments) {
-    Matrix<int, 2, 0> matrix;
+    Matrix<int, 0, 2> matrix;
 
     ASSERT_EQ(matrix.size(), 0U);
 
